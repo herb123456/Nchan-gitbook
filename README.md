@@ -1,3 +1,6 @@
-# My Awesome Book
+# 利用 Nchan 快速打造即時聊天系統
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+此一系列文章，將教導大家如何使用 Nchan 融入現有系統，極快速的時間將未有 Server push 的傳統 Web Application，瞬間變成可主動通知使用者的即時通知系統。
+
+這有助於讓想在現有系統上增加聊天、即時訊息通知等，需要立即讓使用者收到訊息的功能，可以快速實現，並部署到產品上。
+
