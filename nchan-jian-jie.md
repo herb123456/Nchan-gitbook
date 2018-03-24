@@ -16,6 +16,7 @@ Nchan也同時支援，在[上一章節](/ji-shi-tong-zhi-xi-tong-jian-jie.md)�
 6. 提供hooks跟callback可輕易與現有程式結合
 7. 搭配Redis可水平擴展
 8. 若與Redis Cluster搭配則可達到自動容錯與高可用性
+9. 高性能（依據官方測試數據，使用Xeon L5630 8 HT core CPU，產生8個nginx worker，在七萬訂閱者情況下，只需要不到0.2秒的時間即可將訊息傳遞完畢）
 
 
 
