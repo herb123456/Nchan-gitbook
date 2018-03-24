@@ -33,8 +33,7 @@ $ tar zxvf nginx-1.12.2.tar.gz
 ### Nchan原始碼
 
 ```
-$ wget https://nchan.io/download/nginx-nchan-latest.tar.gz
-$ tar zxvf nginx-nchan-latest.tar.gz
+$ git clone https://github.com/slact/nchan.git
 ```
 
 ## 產生Makefile
