@@ -7,7 +7,7 @@
 安裝編譯所需套件
 
 ```
-$ yum install -y git wget
+$ yum install -y git wget pcre pcre-devel openssl openssl-devel libxslt libxslt-devel gd gd-devel perl-devel perl-ExtUtils-Embed GeoIP-devel GeoIP gperftools gperftools-devel
 ```
 
 ```
@@ -106,11 +106,24 @@ $ ./configure --prefix=/usr/share/nginx \
               --with-google_perftools_module \
               --with-debug \
               --with-cc-opt='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic' \
-              --with-ld-opt='-Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -Wl,-E'
+              --with-ld-opt='-Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -Wl,-E' \
               --add-dynamic-module=../nchan
 ```
 
+注意最後的--add-dynamic-module參數，這會把nchan編譯成so檔，在需要的地方動態載入，但這只有在nginx版本大於1.9.11才有支援，在此之前的版本需使用
+
+```
+--add-module=../nchan
+```
+
 ## 編譯與安裝
+
+直接make即可
+
+```
+$ make
+$ make install
+```
 
 
 
