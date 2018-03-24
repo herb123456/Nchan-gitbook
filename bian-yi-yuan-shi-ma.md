@@ -8,7 +8,26 @@ aaa
 
 ## 下載原始碼
 
-aaa
+### nginx原始碼
+
+目前穩定版本是 1.12.2
+
+```
+$ wget https://nginx.org/download/nginx-1.12.2.tar.gz
+```
+
+解壓縮
+
+```
+$ tar zxvf nginx-1.12.2.tar.gz
+```
+
+### Nchan原始碼
+
+```
+$ wget https://nchan.io/download/nginx-nchan-latest.tar.gz
+$ tar zxvf nginx-nchan-latest.tar.gz
+```
 
 ## 產生Makefile
 
