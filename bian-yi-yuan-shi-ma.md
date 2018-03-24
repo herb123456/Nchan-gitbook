@@ -4,6 +4,8 @@
 
 ## 編譯前的準備
 
+安裝編譯所需套件
+
 ```
 $ yum install -y git wget
 ```
