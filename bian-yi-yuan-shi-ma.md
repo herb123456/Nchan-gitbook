@@ -4,7 +4,13 @@
 
 ## 編譯前的準備
 
-aaa
+```
+$ yum install -y git wget
+```
+
+```
+$ yum -y groupinstall "Development Tools"
+```
 
 ## 下載原始碼
 
