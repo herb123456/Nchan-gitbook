@@ -119,5 +119,25 @@ $ docker run -p 80:80 -v $(pwd)/nginx.vh.default.conf:/etc/nginx/conf.d/default.
 
 在連線位置上打自己的ip
 
+channel id則可以任意輸入
 
+之後按連線
+
+如果成功則會看到 CONNECTED
+
+![](/assets/Screen Shot 2018-03-25 at 4.39.24 PM.png)
+
+這時候只需要對這個channel id發送POS請求即可傳送訊息
+
+```
+ $ curl --request POST --data "test" "http://172.105.204.205/pub?id=abcd"
+queued messages: 1
+last requested: 99 sec. ago
+active subscribers: 1
+last message id: 1521967261:0
+```
+
+頁面上也會同步出現剛剛打的訊息 test
+
+![](/assets/Screen Shot 2018-03-25 at 4.41.25 PM.png)
 
