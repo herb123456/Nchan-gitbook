@@ -416,5 +416,17 @@ docker build -t my-nchan .
 
 ## 使用別人製作好的image
 
+可以使用我製作好的docker image
 
+```
+docker run -p 80:80 herb123456/nchan-alpine
+```
+
+Google後有其他人也有製作nchan的docker image
+
+```
+docker run -p 80:80 meroje/alpine-nchan
+```
+
+只是版本還停留在1.1.5
 
