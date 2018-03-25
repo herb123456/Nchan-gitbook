@@ -23,13 +23,19 @@ http {
 }
 ```
 
-這裡使用get參數id當作channel id
+這裡使用query string\(get參數\)id當作channel id
 
 所以若要發佈訊息只需要發出POST請求到 /pub?id=channel\_id
 
 nchan就會自動把訊息傳送給有訂閱 /sub?id=channel\_id的訂閱者
 
-下個章節就會實際實驗看看
+下個章節就會實際實驗
 
+由此設定不難看出
 
+nchan 的關鍵字 nchan\_subscriber
+
+就是讓這個位置變成訂閱點
+
+而nchan\_publisher就是讓這個位置變成發佈點
 
