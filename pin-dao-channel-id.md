@@ -45,5 +45,50 @@ nchan 甚至支援多 channel id
 
 可以同時訂閱多個channel也可以同時發送訊息給多個channel
 
+```
+location ~ /multisub/(\w+)/(\w+)$ {
+    nchan_subscriber;
+    nchan_channel_id "$1" "$2" "common_channel";
+    #GET /multisub/foo/bar will be subscribed to:
+    # channels 'foo', 'bar', and 'common_channel',
+    #and will receive messages from all of the above.
+  }
+```
 
+這個設定就支援同時訂閱三個channel
+
+一個固定的 common\_channel
+
+另外兩個是變動的channel
+
+但如果我要訂閱n個呢？
+
+```
+location ~ /multisub-split/(.*)$ {
+    nchan_subscriber;
+    nchan_channel_id "$1";
+    nchan_channel_id_split_delimiter ",";
+    #GET /multisub-split/foo,bar,baz,a will be subscribed to:
+    # channels 'foo', 'bar', 'baz', and 'a'
+    #and will receive messages from all of the above.
+  }
+```
+
+可以用 nchan\_channel\_id\_split\_delimiter 指定分割符號
+
+這樣訂閱的時候位置可以是
+
+```
+/multisub-split/foo,bar,baz,a
+```
+
+就同時訂閱了四個頻道
+
+同樣的原理
+
+只需要把nchan\_subscriber
+
+替換成nchan\_publisher
+
+就可以同時對多個頻道發佈訊息了
 
