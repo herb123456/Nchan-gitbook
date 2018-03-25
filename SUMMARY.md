@@ -17,7 +17,5 @@
   * 訂閱者上線與下線通知
   * 訊息轉發
   * 訂閱與發佈時的驗證
-* Nchan 可用變數
-
-
+* [Nchan 可用變數](nchan-ke-yong-bian-shu.md)
 
