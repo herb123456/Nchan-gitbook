@@ -16,8 +16,6 @@
 * [同時支援發佈與訂閱\(PubSub\)設定](tong-shi-zhi-yuan-fa-bu-yu-ding-95b128-pubsub-she-ding.md)
 * [Nchan 與後端程式的結合](nchan-yu-hou-duan-cheng-shi-de-jie-he.md)
   * [訂閱者上線與下線通知](nchan-yu-hou-duan-cheng-shi-de-jie-he/ding-yue-zhe-shang-xian-yu-xia-xian-tong-zhi.md)
-  * [訊息轉發](nchan-yu-hou-duan-cheng-shi-de-jie-he/xun-xi-zhuan-fa.md)
   * [訂閱與發佈時的驗證](nchan-yu-hou-duan-cheng-shi-de-jie-he/ding-yue-yu-fa-bu-shi-de-yan-zheng.md)
-
-
+  * [訊息轉發](nchan-yu-hou-duan-cheng-shi-de-jie-he/xun-xi-zhuan-fa.md)
 
