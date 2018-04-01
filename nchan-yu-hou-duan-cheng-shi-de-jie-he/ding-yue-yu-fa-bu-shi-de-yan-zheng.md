@@ -8,14 +8,14 @@
   upstream my_app {
     server 127.0.0.1:8080;
   }
-  
+
   location ~ /pubsub/auth/(\w+)$ {
     nchan_channel_id $1;
     nchan_authorize_request /auth;
     nchan_pubsub;
     nchan_channel_group test;
   }
-  
+
   location = /auth {
     proxy_pass http://my_app/pubsub_authorize;
     proxy_pass_request_body off;
@@ -29,5 +29,5 @@
   }
 ```
 
-在這個官方提供的範例裡，可以看到定義了一個pubsub的路徑，並且對這路徑做訂閱與發佈的同時，會去`/auth`做驗證，`/auth`這個路徑則會把這個請求反向代理到另一個後端伺服器myapp做驗證，這會連同原本的header與cookie都一起帶過去，所以可以在後端伺服器使用session、cookie跟nchan所提供的變數一起驗證是否允許這個請求，如果允許，只需要讓http status code是200即可，其他的status code，nchan都會將後端所傳回的資訊一併帶回給client。
+在這個官方提供的範例裡，可以看到定義了一個pubsub的路徑，並且對這路徑做訂閱與發佈的同時，會去`/auth`做驗證，`/auth`這個路徑則會把這個請求反向代理到另一個後端伺服器`myapp`的`/pubsub_authorize`路徑下做驗證，這會連同原本的header與cookie都一起帶過去，所以可以在後端伺服器使用session、cookie跟nchan所提供的變數一起驗證是否允許這個請求，如果允許，只需要讓http status code是2xx即可，其他的status code，nchan都會將後端所傳回的資訊一併帶回給client。
 
