@@ -20,6 +20,6 @@
   * [訊息轉發](nchan-yu-hou-duan-cheng-shi-de-jie-he/xun-xi-zhuan-fa.md)
 * [安全性設置](pin-dao-de-an-quan-xing-she-zhi.md)
   * [發佈的安全性設置](pin-dao-de-an-quan-xing-she-zhi/fa-bu-de-an-quan-xing-she-zhi.md)
-  * 訂閱的安全性設置
+  * [訂閱的安全性設置](pin-dao-de-an-quan-xing-she-zhi/ding-yue-de-an-quan-xing-she-zhi.md)
 * [如何水平擴展與達到高可用性\(HA\)](ru-he-shui-ping-kuo-zhan-yu-da-dao-gao-ke-yong-602728-ha.md)
 
