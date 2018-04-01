@@ -18,5 +18,6 @@
   * [訂閱者上線與下線通知](nchan-yu-hou-duan-cheng-shi-de-jie-he/ding-yue-zhe-shang-xian-yu-xia-xian-tong-zhi.md)
   * [訊息轉發](nchan-yu-hou-duan-cheng-shi-de-jie-he/xun-xi-zhuan-fa.md)
   * [訂閱與發佈時的驗證](nchan-yu-hou-duan-cheng-shi-de-jie-he/ding-yue-yu-fa-bu-shi-de-yan-zheng.md)
-* 頻道Group ID
+
+
 
