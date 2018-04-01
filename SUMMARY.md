@@ -10,7 +10,7 @@
 * [基礎設定](ji-ben-she-ding.md)
 * [基礎設定實作](ji-chu-she-ding-shi-zuo.md)
 * [頻道 Channel ID](pin-dao-channel-id.md)
-* 頻道Group ID
+* [頻道 Group ID](pin-dao-group-id.md)
 * [發佈者\(Publisher\)設定](fa-bu-800528-publisher-she-ding.md)
 * [訂閱者\(Subscriber\)設定](ding-yue-800528-subscriber-she-ding.md)
 * [同時支援發佈與訂閱\(PubSub\)設定](tong-shi-zhi-yuan-fa-bu-yu-ding-95b128-pubsub-she-ding.md)
