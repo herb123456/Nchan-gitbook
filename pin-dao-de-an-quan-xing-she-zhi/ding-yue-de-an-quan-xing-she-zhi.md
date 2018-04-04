@@ -42,5 +42,16 @@ server {
 }
 ```
 
+依據設定，真正的subscribe位置屬於internal，所以只有nginx的redirect請求可以訪問，其他人直接訪問這個位置，都會出現`404 Not Found`的錯誤訊息。
+
+若要連上，則需要先訪問`/sub_upstram`這個位置，nginx會先用`proxy_pass`將請求轉發到後端伺服器，如果通過驗證，則產生一組一次性的token ID或編碼過的channel ID，並回覆status code 200，另外加上兩個特殊的http header
+
+```
+X-Accel-Redirect: /sub/internal/my_channel_id
+X-Accel-Buffering: no
+```
+
+這時nginx就會幫忙把該請求轉址到`/sub/internal/my_channel_id`並建立起Websocket的連線；反之，如果驗證不通過，則需要回應status code 403 Forbidden，此次連接就會直接結束。
+
 
 
