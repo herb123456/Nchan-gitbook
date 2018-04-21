@@ -186,7 +186,7 @@ stretch則是debain stretch
     
     CMD ["nginx", "-g", "daemon off;"]
 
-依據上一篇[編譯原始碼](/bian-yi-yuan-shi-ma.md)安裝的方式，我們只需要加入下載nchan原始碼，跟加入編譯參數的部分就好
+依據上一篇[編譯原始碼](/編譯原始碼.md)安裝的方式，我們只需要加入下載nchan原始碼，跟加入編譯參數的部分就好
 
 所以在最上面加入nchan版本號，或是直接使用最新版（lastest）
 
